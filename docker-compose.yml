@@ -1,0 +1,13 @@
+version: "3"
+services:
+  alpine-buildbot:
+    container_name: alpine-buildbot
+    hostname: alpine-buildbot
+    build: .
+    image: oxr463/alpine-buildbot:latest
+    volumes:
+      - ~/src/alpine-buildbot/:/usr/src/alpine-buildbot
+      - ~/src/alpine-buildbot/master.cfg:/var/lib/buildbot/master.cfg
+    ports:
+      - "8010:8010"
+
