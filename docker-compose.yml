@@ -4,7 +4,7 @@ services:
     container_name: alpine-buildbot
     hostname: alpine-buildbot
     build: .
-    image: oxr463/alpine-buildbot:latest
+    image: buildbot/buildbot-master:master
     volumes:
       - ~/src/alpine-buildbot/:/usr/src/alpine-buildbot
       - ~/src/alpine-buildbot/master.cfg:/var/lib/buildbot/master.cfg
