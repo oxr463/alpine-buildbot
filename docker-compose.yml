@@ -3,11 +3,10 @@ services:
   alpine-buildbot:
     container_name: alpine-buildbot
     hostname: alpine-buildbot
-    build: .
     image: buildbot/buildbot-master:master
     volumes:
       - ~/src/alpine-buildbot/:/usr/src/alpine-buildbot
-      - ~/src/alpine-buildbot/master.cfg:/var/lib/buildbot/master.cfg
+      - ~/src/alpine-buildbot/master.cfg:/buildbot/master.cfg
     ports:
       - "8010:8010"
 
